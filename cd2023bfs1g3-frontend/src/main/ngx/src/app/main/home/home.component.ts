@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injector, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'home',
@@ -7,14 +8,16 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  
   constructor(
     private router: Router,
-    private actRoute: ActivatedRoute
-  ) {
-  }
+    private actRoute: ActivatedRoute,
+    public injector: Injector,
+  ) { }
 
   ngOnInit() {
+    // nothing to do
+
   }
 
   navigate() {

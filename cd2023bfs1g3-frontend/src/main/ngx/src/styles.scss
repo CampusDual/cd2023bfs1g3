@@ -1,40 +1,325 @@
 /* You can add global styles to this file, and also import other style files */
-.o-form-layout-manager {
-  .o-form {
-    form {
-      height: 100%;
-    }
+/*Estilos IMATIA*/
+// $primary: #14148A !important;
+
+$primary: #000000 !important;
+
+.alert-icon.info {
+  color: #000000 !important;
+}
+
+body,
+html {
+  background-color: #FFFFFF !important;
+  font-family: Roboto, Arial, sans-serif !important;
+  font-weight: 400 !important;
+
+  h1 {
+    font-family: Verdana, Arial, sans-serif !important;
+    font-weight: bold !important;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500 !important;
   }
 }
 
-/* Form toolbar background color */
-.o-form-toolbar .o-form-toolbar-header.mat-toolbar {
-  background-color: transparent;
+button,
+html,
+input,
+select,
+span,
+textarea,
+.mat-card,
+.mat-table {
+  font-family: Roboto, Arial, sans-serif !important;
+  font-weight: 400 !important;
 }
 
-
-.o-column > div.o-container .o-container-scroll.o-container-gap,
-.o-row > div.o-container .o-container-scroll.o-container-gap {
-  padding: 15px;
+.mat-toolbar,
+.mat-toolbar h1,
+.mat-toolbar h2,
+.mat-toolbar h3,
+.mat-toolbar h4,
+.mat-toolbar h5,
+.mat-toolbar h6 {
+  font: 500 20px/32px Roboto, Arial, sans-serif !important;
 }
 
-.avatar.o-image {
-  width: 200px;
+.input-padding {
+  padding-right: 1.5rem;
+}
+
+.navMenu,
+.sidenav-toggle-container,
+.footer-container,
+.mat-drawer-inner-container {
+  background-color: #000000 !important;
+}
+
+.mat-dialog-actions button:not([disabled]).mat-button-base.mat-primary,
+.mat-dialog-actions button:not([disabled]).mat-button-base.o-button-primary,
+.o-form .o-form-toolbar button:not([disabled]).o-form-toolbar-button.mat-button-base.mat-primary,
+.o-form .o-form-toolbar button:not([disabled]).o-form-toolbar-button.mat-button-base.o-button-primary,
+.o-grid .o-grid-toolbar button.o-grid-button:not([disabled]).mat-button-base.mat-primary,
+.o-grid .o-grid-toolbar button.o-grid-button:not([disabled]).mat-button-base.o-button-primary,
+.o-list .o-list-toolbar button.o-list-button:not([disabled]).mat-button-base.mat-primary,
+.o-list .o-list-toolbar button.o-list-button:not([disabled]).mat-button-base.o-button-primary,
+.ontimize-table.o-table .o-table-container .o-table-toolbar .buttons .o-table-button button:not([disabled]).mat-button-base.mat-primary,
+.ontimize-table.o-table .o-table-container .o-table-toolbar .buttons .o-table-button button:not([disabled]).mat-button-base.o-button-primary {
+  background-color: #e4333c1e !important;
+}
+
+.mat-raised-button.mat-button-base.mat-primary {
+  background-color: #E4333C !important;
+}
+
+#gridProducts,
+.application-layout-content-wrapper,
+.header-layout {
+  background-color: #f6f7f8;
+}
+
+input:not([type]):disabled,
+input[type="color"]:disabled,
+input[type="date"]:disabled,
+input[type="datetime"]:disabled,
+input[type="datetime-local"]:disabled,
+input[type="email"]:disabled,
+input[type="month"]:disabled,
+input[type="number"]:disabled,
+input[type="password"]:disabled,
+input[type="search"]:disabled,
+input[type="tel"]:disabled,
+input[type="text"]:disabled,
+input[type="time"]:disabled,
+input[type="url"]:disabled,
+input[type="week"]:disabled,
+textarea:disabled {
+  color: #4b4b4b;
+}
+
+.mat-select-disabled .mat-select-value {
+  color: #4b4b4b;
+}
+
+.mat-input-element:disabled,
+.mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after {
+  color: #4b4b4b;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: rgba(0, 0, 0);
+}
+
+.mat-form-field .mat-disabled,
+.mat-button.mat-primary[disabled],
+.mat-button.mat-accent[disabled],
+.mat-button.mat-warn[disabled],
+.mat-button[disabled][disabled],
+.mat-icon-button.mat-primary[disabled],
+.mat-icon-button.mat-accent[disabled],
+.mat-icon-button.mat-warn[disabled],
+.mat-icon-button[disabled][disabled],
+.mat-stroked-button.mat-primary[disabled],
+.mat-stroked-button.mat-accent[disabled],
+.mat-stroked-button.mat-warn[disabled],
+.mat-stroked-button[disabled][disabled] {
+  color: rgba(0, 0, 0, 0.50);
+}
+
+.container-item {
+  width: 100%;
+  height: 100%;
+
+  .name {
+    margin: 8px 0;
+    font-size: 0.9em;
+  }
+
+  .price,
+  .domain,
+  .stock,
+  .body,
+  .website {
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+    color: #4b4b4b;
+
+    mat-icon {
+      padding-right: 8px;
+    }
+
+    span {
+      font-family: Roboto, Arial, sans-serif !important;
+      font-weight: 400 !important;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      margin: 5px 0;
+    }
+  }
+
+  .mat-icon {
+    font-size: 18px;
+    height: 18px;
+    ;
+  }
+
+  img {
+    height: 50%;
+    object-fit: cover;
+  }
+
+}
+
+.mat-button-base:hover {
+  background-color: #e4333c63 !important;
+}
+
+.o-app-sidenav .o-app-sidenav-sidenav {
+  background: #000000 !important;
+}
+
+.o-app-sidenav .o-app-sidenav-menu-group:not([disabled="true"]) a.o-app-sidenav-viewer-sidenav-item-selected,
+.o-app-sidenav .o-app-sidenav-menu-group:not([disabled="true"]) a:hover,
+.o-app-sidenav .o-app-sidenav-menu-item:not([disabled="true"]) a.o-app-sidenav-viewer-sidenav-item-selected,
+.o-app-sidenav .o-app-sidenav-menu-item:not([disabled="true"]) a:hover {
+  color: #000000 !important;
+  background-color: #ffffffd0;
+}
+
+.mat-dialog-actions button:not([disabled]).o-button-primary.mat-stroked-button.mat-button-base,
+.mat-dialog-actions button:not([disabled]).mat-button-base.mat-primary,
+.mat-dialog-actions button:not([disabled]).mat-button-base.o-button-primary {
+  color: #303030;
+  background-color: #e4333c63;
+  border-color: transparent;
+}
+
+.mat-dialog-actions button:not([disabled]).o-button-default.cancel {
+  color: #1464a5;
+  background-color: #e4333c1e;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.o-app-sidenav .o-app-sidenav-sidenav .o-app-sidenav-menu-group-level-1 .o-app-sidenav-menugroup.opened+.o-app-sidenav-menugroup-items-container ul {
+  background: #E4333C47;
+}
+
+.o-card-menu-item .o-card-menu-item-content .o-card-menu-item-image-container img {
+  width: 30% !important;
+  height: 30%;
+  max-width: 30%;
+  max-height: 30%;
+}
+
+.o-card-menu-item .o-card-menu-item-title {
+  color: #000000;
+  font-size: 20px;
+}
+
+.o-card-menu-item .mat-button {
+  color: #303030;
+}
+
+.o-card-menu-item .mat-button {
+  // background: #e4333c3f;
+  background: #E4333C;
+  color: #ffffff;
+}
+
+// [layout-padding], [layout-padding] > [flex], [layout-padding] > [flex-gt-sm], [layout-padding] > [flex-md], [layout-padding] > [flex-lt-lg] {
+// 	padding: 50px !important;
+// }
+/*Fin estilos IMATIA*/
+/* Inicio CardProduct */
+
+#cardProduct .mat-list.mat-list.mat-list-base {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+  // align-items: center;
+}
+
+#cardProduct .o-list-item.o-list-item.ng-star-inserted {
+  width: 23%;
+  max-height: 350px;
+}
+
+#cardProduct .o-list-item-card-image .mat-card.small {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  height: 100%;
+  max-width: 330px;
+}
+
+#cardProduct .mat-card-title {
+  font-size: 1.1em;
+}
+
+.o-list-container .mat-list {
+  overflow: hidden !important;
+  padding-bottom: 2rem;
+}
+
+.mat-card-image.ng-star-inserted {
   height: 200px;
+  object-fit: contain;
+  padding: 1rem;
+  box-sizing: border-box;
+}
 
-  .o-image-content.o-image-auto-fit {
-    .o-image-display-container {
-      img {
-        border-radius: 50%;
-        aspect-ratio: auto 200/200;
-        width: 200px;
-        height: 200px;
-      }
-    }
+.o-item-card.mat-card.small {
+  place-content: flex-start !important;
+  align-items: start !important;
+}
 
-    .o-image-form-field {
-      position: absolute;
-      bottom: -42px;
-    }
+.mat-card-content.ng-star-inserted p {
+  font-size: 1rem;
+}
+
+.o-list-container .mat-list .o-custom-list-item {
+  height: 100% !important;
+}
+
+.mat-list .mat-list-item.o-card-item,
+.mat-list .mat-list-item.o-card-item .mat-list-item-content {
+  height: 100% !important;
+}
+
+.back {
+  display: flex;
+  /* width: 100%; */
+  /* height: 2%; */
+  margin-top: 1%;
+  margin-bottom: 2%;
+  background-color: #ECEFF1;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem;
+  border-radius: 2px;
+}
+
+/* Mobile*/
+@media screen and (max-width: 480px) {
+  #cardProduct .o-list-item.o-list-item.ng-star-inserted {
+    width: 100%;
   }
 }
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #cardProduct .o-list-item.o-list-item.ng-star-inserted {
+    width: 45%;
+  }
+}
+
+
+/* FIN cardProduct*/

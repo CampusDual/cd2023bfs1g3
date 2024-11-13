@@ -1,0 +1,18 @@
+/* You can add main module styles to this file */
+.container-bg-wellcome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // align-content: center;
+}
+
+.logo {
+    width: 4.5em;
+    margin-left: 1em;
+}
+
+.wellcome {
+    margin-left: 1em;
+    font-size: smaller;
+    text-align: center;
+}

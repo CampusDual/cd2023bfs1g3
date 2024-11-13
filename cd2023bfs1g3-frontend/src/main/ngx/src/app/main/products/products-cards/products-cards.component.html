@@ -1,0 +1,15 @@
+<o-list #list id="cardProduct" attr="list" title="PRODUCTS" service="products" entity="activeProduct"
+  columns="id;name;istock;price;photo;date_added;state;body;name_location" keys="id" refresh-button="false" insert-button="false"
+  delete-button="no" quick-filter="yes" query-on-init="true" query-rows="12" pagination-controls="true"
+  row-height="small">
+
+  <o-list-item *ngFor="let row of list.dataArray" select-table="true">
+    <o-list-item-card-image empty-image="assets\images\no-image.png" 
+      title="{{ row.name }}" 
+      subtitle="{{row.name_location}} | {{'price' | oTranslate}}: {{ row.price }} €"
+      image="data:image/png;base64,{{ row.photo }}" 
+      content="{{'istock' | oTranslate}}: {{ row.istock }} {{'unit' | oTranslate}}"
+      collapsible="false" collapsed="true" sql-type="varchar">
+    </o-list-item-card-image>
+  </o-list-item>
+</o-list>

@@ -1,4 +1,10 @@
-<o-app-layout show-language-selector="no">
-  <o-user-info-configuration show-profile="yes"> </o-user-info-configuration>
+<o-app-layout show-language-selector="yes">
+  <o-app-layout-header>
+    <div class="container-bg-wellcome">
+      <img class="logo" src="./assets/images/faviconv.svg" alt="Volvoreta logo">
+      <p class="wellcome">{{'wellcome' | oTranslate}}, {{user_name}} {{user_surname}}; {{'access_type' | oTranslate}}:
+        {{role_name | oTranslate}}</p>
+    </div>
+  </o-app-layout-header>
   <router-outlet></router-outlet>
 </o-app-layout>

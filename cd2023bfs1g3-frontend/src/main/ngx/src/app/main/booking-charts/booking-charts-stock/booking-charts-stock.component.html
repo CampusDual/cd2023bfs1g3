@@ -1,0 +1,11 @@
+<o-form #myForm editable-detail="no" show-header="no">
+    <div><h2>{{'charts'| oTranslate}}</h2></div>
+    <o-combo attr="year" label="2023" [data]="2023"  value-column="name" columns="id;name" 
+      visible-columns="name" read-only="yes"></o-combo>
+    <div><h3>{{'GLOBAL-BOOKINGS' | oTranslate}}: {{'stock_rotation' | oTranslate}}</h3></div>
+  </o-form>
+  <div class="playground-multi" fxflex="grow" style="flex: 1 1 100%; box-sizing: border-box; max-height: 100%;">
+    <o-chart #multiBarHor type="multiBarHorizontalChart" chart-height="600" x-label="Product name" y-label="Units" 
+      service="bookings" entity="stockBooking"  x-axis="name" y-axis="stockd;units_sales" x-data-type="text" 
+      [chart-parameters]="chartParameters1" y-data-type="number"></o-chart>
+  </div>

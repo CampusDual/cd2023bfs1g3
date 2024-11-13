@@ -1,0 +1,35 @@
+.reserve-dialog-title .mat-icon{
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+}
+
+.reserve-dialog-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #14148a;
+  padding-bottom: 5px;
+}
+
+.reserve-dialog-title h1 {
+  margin: 0;
+}
+
+.dialog-content-reserve span {
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* .dialog-content-reserve p {
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+} */
+
+.dialog-content-reserve {
+  margin: 1rem 0;
+  border-radius: 5px;
+}

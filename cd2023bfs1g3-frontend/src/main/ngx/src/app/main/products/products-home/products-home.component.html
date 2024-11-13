@@ -1,0 +1,24 @@
+<o-table attr="products" service="products" entity="product" keys="id" sort-columns="name:DESC"
+  columns="photo;id;name;state_name;price;stock;istock;reserved;date_added;active;body;id_locations;name_location" 
+  visible-columns="photo;id;name;state_name;price;stock;istock;reserved;date_added;name_location;active" query-on-init="true"
+  query-on-init="true" query-rows="20" quick-filter="yes"
+  insert-table="yes">
+  <o-table-column attr="name" orderable="yes" searchable="no" type="string">
+  </o-table-column>
+  <o-table-column attr="photo" orderable="no" searchable="no" type="image" image-type="base64"
+    empty-image="assets/images/login_bg.jpg" avatar="yes">
+  </o-table-column>
+  <o-table-column attr="date_added" orderable="yes" searchable="no" type="date">
+  </o-table-column>
+  <o-table-column attr="active" title="active">
+    <o-table-cell-renderer-boolean render-true-value="task_alt" render-false-value="cancel" render-type="icon"
+        boolean-type="boolean">
+    </o-table-cell-renderer-boolean>
+  </o-table-column>
+  <o-table-column attr="state_name">
+    <o-table-cell-renderer-translate></o-table-cell-renderer-translate>
+  </o-table-column>
+  <o-table-column attr="price" title="price" type="currency" thousand-separator="." decimal-separator="," currency-symbol="€" currency-symbol-position="right"></o-table-column>
+</o-table>
+
+

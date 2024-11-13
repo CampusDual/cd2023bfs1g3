@@ -1,0 +1,8 @@
+<div fxFill fxLayout="column" fxLayoutAlign="start">
+    <o-table attr="user" service="users" entity="user" keys="user_" sort-columns="name:DESC"
+        columns="user_;name;surname1;surname2;nif" visible-columns="name;surname1;surname2;nif" query-on-init="true"
+        query-rows="20" quick-filter="yes" delete-button='no' insert-button='no' refresh-button='yes'  >
+        <o-table-column attr="name" orderable="yes" searchable="no" type="string">
+        </o-table-column>
+    </o-table>
+</div>

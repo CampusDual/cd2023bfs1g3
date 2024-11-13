@@ -1,0 +1,46 @@
+<div class="back">
+  <button class="o-form-toolbar-button o-form-toolbar-back mat-icon-button mat-button-base ng-star-inserted" mat-icon-button="" type="button" (click)="turnback()">
+    <span class="mat-button-wrapper">
+      <mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" svgicon="ontimize:arrow_back" aria-hidden="true" ng-reflect-svg-icon="ontimize:arrow_back">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+          <g id="Bounding_Boxes">
+            <path fill="none" d="M0,0h24v24H0V0z"></path>
+          </g>
+          <g id="Outline_1_">
+            <path fill="#0B488A" d="M20,11H7.83l5.59-5.59L12,4l-8,8l8,8l1.41-1.41L7.83,13H20V11z"></path>
+          </g>
+        </svg>
+      </mat-icon>
+    </span>
+  </button>
+</div>
+
+<div class="container-product-view">
+  <div class="container-units-button-img"> 
+    <div class="product-view-image">
+    <img [src]="imagePath" alt="photo" translate="yes"/>
+    
+  </div>
+  <div class="units">
+    <label for="units">{{ 'units' | oTranslate }}:</label>
+    <input #units value="1" type="number" id="units" name="units" min="1" max="{{product.istock}}">
+    <o-button (onClick)="reserve(units.value)" attr="raised2" type="RAISED" label="reserve" translate="yes" layout-padding
+          color="primary"></o-button>
+  </div>
+</div>
+ 
+  <div class="product-view-content">
+    <form [formGroup]="contentView">
+      <div>
+        <p><span>{{ 'id_locations' | oTranslate }}:</span> {{ product.name_location }}</p>
+        <p><span>{{ 'name' | oTranslate }}:</span> {{ product.name }}</p>
+        <p><span>{{'istock' | oTranslate}}:</span> {{ product.istock }} {{ 'units' | oTranslate }}</p>
+        <p><span>{{'price' | oTranslate}}:</span> {{ product.price }} €</p>
+        <p><span>{{'state' | oTranslate}}:</span> {{ product.state_name | oTranslate}}</p>
+        <p><span>{{'body' | oTranslate}}:</span></p>
+        <p> {{ product.body }}</p>
+      </div>
+    </form>
+  </div>
+</div>
+

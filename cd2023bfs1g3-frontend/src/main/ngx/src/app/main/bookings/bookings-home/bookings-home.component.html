@@ -1,0 +1,15 @@
+<o-table attr="bookings" service="bookings" entity="myBooking" keys="id" sort-columns="reservation_date:DESC"
+columns="id;id_user;id_product;name;units;reservation_date;unit_price;total_price;reservation_days;collection_completed;end_date;name_reservation_state" 
+  visible-columns="id;name;units;reservation_date;end_date;unit_price;total_price;collection_completed;name_reservation_state"
+  query-on-init="true" query-rows="20" quick-filter="yes" delete-button="no" insert-button="false"
+  insert-table="yes">
+    <o-table-column attr="reservation_date" type="date"></o-table-column>
+    <o-table-column attr="end_date" type="date"></o-table-column>
+    <o-table-column attr="units" orderable="yes" searchable="no" type="number"> units</o-table-column>
+    <o-table-column attr="unit_price" title="unit_price" type="currency" thousand-separator="." decimal-separator="," currency-symbol="€" currency-symbol-position="right"></o-table-column>
+    <o-table-column attr="total_price" title="total_price" type="currency" thousand-separator="." decimal-separator="," currency-symbol="€" currency-symbol-position="right"></o-table-column>
+    <o-table-column attr="collection_completed" title="picked_up" type="date"></o-table-column>
+    <o-table-column attr="name_reservation_state" type="text">
+      <o-table-cell-renderer-translate></o-table-cell-renderer-translate>
+    </o-table-column>
+</o-table>

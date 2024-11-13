@@ -1,0 +1,9 @@
+.users-card {
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.users-card-chart .nvd3 .nv-axis line {
+  display: none;
+}

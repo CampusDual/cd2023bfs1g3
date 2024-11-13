@@ -1,0 +1,8 @@
+<o-form #myForm editable-detail="no" show-header="no">
+    <div><h2>{{'charts'| oTranslate}}</h2></div>
+    <o-combo attr="year" label="2023" [data]="2023"  value-column="name" columns="id;name" 
+      visible-columns="name" read-only="yes"></o-combo>
+    <div><h3>{{'GLOBAL-BOOKINGS' | oTranslate}}: {{'profits_per_location' | oTranslate}}</h3></div>
+    <o-chart type="pie" layout-fill  service="bookings" entity="locationsBooking" x-axis="name_location" y-axis="profits" 
+    [chart-parameters]="chartParameters1" y-data-type="number"></o-chart>
+</o-form>

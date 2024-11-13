@@ -22,11 +22,11 @@
     overflow: auto;
 
     .login-bg-container {
-      background-image: url('^assets/images/login_bg.png');
+      background-image: url('^assets/images/login_bg.jpg');
       width: calc(100% - 640px);
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: right;
       position: relative;
       z-index: 1;
     }
@@ -40,16 +40,21 @@
       height: 100%;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, .1);
+      background: rgba(255, 255, 255, 0.1);
       opacity: .8;
     }
 
     .wrapp-login {
       width: 640px;
       min-height: 100%;
-
+      
       .login-inner-container {
         width: 100%;
+        
+        .logo-img {
+          width: 40%;
+          // height: 150%;
+        }
 
         form {
           padding: 16px;
@@ -70,7 +75,7 @@
         .session-expired {
           text-align: center;
         }
-
+        
         .login-title-container {
           margin-top: 64px;
         }

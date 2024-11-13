@@ -1,0 +1,19 @@
+<div class="reserve-dialog-title">
+    <mat-icon class="alert-icon mat-icon notranslate material-icons info mat-icon-no-color ng-star-inserted" role="img" aria-hidden="true"> info </mat-icon>
+    <h1 mat-dialog-title>{{ 'reservation summary' | oTranslate}}</h1>
+</div>
+<div mat-dialog-content class="dialog-content-reserve">
+    <p><span>{{ 'name' | oTranslate }}:</span> {{ data.product.name }}</p>
+    <p><span>{{'stock' | oTranslate}}:</span> {{ data.product.stock }}</p>
+    <p><span>{{'price' | oTranslate}}:</span> {{ data.product.price }} €</p>
+    <p><span>{{ 'units' | oTranslate }}:</span> {{data.units}}</p>
+    <p><span>{{ 'total amount' | oTranslate }}:</span> {{data.totalImport}} €</p>
+
+</div>
+<div mat-dialog-actions class="btn-reserve">
+    <o-button attr="raised2" type="RAISED" label="{{'confirm' | oTranslate}}" (onClick)="reserveOK()" layout-padding
+        color="white">
+    </o-button>
+  <button mat-button mat-dialog-close cdkFocusInitial>{{'cancel' | oTranslate}}</button>
+</div>
+

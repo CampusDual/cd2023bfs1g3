@@ -1,0 +1,9 @@
+.locations-card {
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.locations-card-chart .nvd3 .nv-axis line {
+  display: none;
+}

@@ -1,0 +1,8 @@
+/* Estilos de las card */
+#cardProduct .mat-list.mat-list.mat-list-base {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}

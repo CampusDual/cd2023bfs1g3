@@ -1,0 +1,9 @@
+.sells-card {
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.sells-card-chart .nvd3 .nv-axis line {
+  display: none;
+}
