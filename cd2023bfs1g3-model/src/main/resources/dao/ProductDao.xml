@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JdbcEntitySetup
+        xmlns="http://www.ontimize.com/schema/jdbc"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.ontimize.com/schema/jdbc http://www.ontimize.com/schema/jdbc/ontimize-jdbc-dao.xsd"
+        catalog="" schema="${mainschema}" table="products"
+        datasource="mainDataSource" sqlhandler="dbSQLStatementHandler">
+    <DeleteKeys>
+        <Column>id</Column>
+    </DeleteKeys>
+    <UpdateKeys>
+        <Column>id</Column>
+    </UpdateKeys>
+    <GeneratedKey>id</GeneratedKey>
+    <Queries>
+        <Query id="default">
+            <AmbiguousColumns>
+                <AmbiguousColumn name="id" prefix="tp" />
+                <AmbiguousColumn name="stock" prefix="tp" />
+            </AmbiguousColumns>
+            <ValidColumns>
+                <Column>id</Column>
+                <Column>name</Column>
+                <Column>stock</Column>
+                <Column>istock</Column>
+                <Column>reserved</Column>
+                <Column>price</Column>
+                <Column>photo</Column>
+                <Column>active</Column>
+                <Column>state</Column>
+                <Column>date_added</Column>
+                <Column>body</Column>
+                <Column>id_locations</Column>
+                <Column>id_state</Column>
+                <Column>state_name</Column>
+                <Column>id_location</Column>
+                <Column>name_location</Column>
+            </ValidColumns>
+            <Sentence>
+                <![CDATA[
+                    SELECT
+                        #COLUMNS#
+                    FROM (
+                        SELECT
+                            *, t.stock - t.reserved istock
+                        FROM (
+                            SELECT
+                                CASE WHEN rs.res IS NULL THEN 0 ELSE rs.res END reserved, *
+                            FROM
+                                ${mainschema}.products tp
+                                LEFT JOIN ${mainschema}.state ts ON tp.state = ts.id_state
+                                LEFT JOIN ${mainschema}.locations tl ON tp.id_locations = tl.id_location
+                                LEFT JOIN (
+                                    SELECT
+                                        product_id, SUM(units) res
+                                    FROM (
+                                        SELECT
+                                            tp.id as product_id, units, stock
+                                        FROM
+                                            ${mainschema}.products tp
+                                            LEFT JOIN ${mainschema}.bookings ON tp.id = id_product
+                                        WHERE
+                                            reservation_state = 1
+                                    ) us
+                                    GROUP BY product_id, stock
+                                ) rs ON rs.product_id = tp.id
+                        ) t
+                    ) tp
+                    #WHERE#
+                ]]>
+            </Sentence>
+        </Query>
+    </Queries>
+</JdbcEntitySetup>
